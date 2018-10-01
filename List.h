@@ -1,3 +1,7 @@
+/*
+    Double linked list with head and tail.
+    Created by Charalampos Kioses.
+*/
 
 #ifndef LISTA_H
 #define LISTA_H
@@ -53,7 +57,6 @@ public:
 		return prev;
 	}
 	void printNode(){
-		//data->print_pizza_node();
       cout<<*data<<endl;
 		
 	}
@@ -181,8 +184,8 @@ public:
     }
     /*
         pops the first object out of the lists and destroys the node.
-        Probably also destroys data. Use pop2 not to destroy data.
-        Return value probably NULL.
+        Also destroys data. Use pop2 not to destroy data.
+        Returns NULL.
     */
     T* pop(){
         if(head == NULL){ //if our list is currently empty
@@ -223,15 +226,6 @@ public:
     	Node<T>* cur = head;
     	while (cur!=NULL){
     		cur->printNode();
-    		cur = cur->getNext();
-    	}
-    }
-    void writefile(FILE * fptr2){
-    	Node<T>* cur = head;
-    	T* data2;
-    	while (cur!=NULL){
-    		data2 = cur->getData();
-    		fprintf(fptr2,"(%d,%d) (%d,%d) \n",data2->start_x,data2->start_y,data2->end_x,data2->end_y);
     		cur = cur->getNext();
     	}
     }

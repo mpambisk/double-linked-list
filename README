@@ -4,21 +4,15 @@ linked list with head and tail pointers. Each list node has a
 next and prev list object, the data and an integer used if we
 want to use the list as a priority queue.
 
---------------------------------------------------------------------------------	 
-|																			   |
-|			  head										  tail				   |
-|				|										   |                   |
-|				|										   |                   |
-|				v				                           v                   |
-|			--------	next	  --------	  next		--------               |
-|	  prev	|	   |------------> |      |------------> |	   |  next         |
-|NULL<------| Node |			  | Node |				| Node |-------->NULL  |
-|		    |      |<------------ |		 |<------------	|      |               |
-|		  	--------	prev      --------    prev	    --------               |
-|               															   |
-|            																   |
---------------------------------------------------------------------------------
-  
+             head			         tail
+	      |				           | 
+	      |					   |     
+	      v				           v    
+                      next   	        next                  
+     prev |      |---------->|      |---------->|      |  next         
+NULL<-----| Node |           | Node |	    	| Node |-------->NULL 
+          |      |<----------|      |<----------|      |       
+                     prev               prev               
 
 Class Node:
 	data next, prev Node pointers and a priority integer.
