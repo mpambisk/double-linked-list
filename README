@@ -1,0 +1,40 @@
+
+	This is a C++ template list data structure. It is a double
+linked list with head and tail pointers. Each list node has a 
+next and prev list object, the data and an integer used if we
+want to use the list as a priority queue.
+
+--------------------------------------------------------------------------------	 
+|																			   |
+|			  head										  tail				   |
+|				|										   |                   |
+|				|										   |                   |
+|				v				                           v                   |
+|			--------	next	  --------	  next		--------               |
+|	  prev	|	   |------------> |      |------------> |	   |  next         |
+|NULL<------| Node |			  | Node |				| Node |-------->NULL  |
+|		    |      |<------------ |		 |<------------	|      |               |
+|		  	--------	prev      --------    prev	    --------               |
+|               															   |
+|            																   |
+--------------------------------------------------------------------------------
+  
+
+Class Node:
+	data next, prev Node pointers and a priority integer.
+Class Lista:
+	head, tail Node pointers and a counter.
+	Node<T> * push(T* info): Creates a new Node and adds it at the end of the 
+							 list.
+	Node<T> * push_priority(T* info,long long int prio): Creates a new Node
+							and adds it at the appropriate place inside the
+							list according to its priority (descending).
+	void popall():Empties the list and destroys data. Uses pop
+	Void popall2():Epties the list but does not destroy data (use for std data)
+					uses pop2
+	void printList(): Print all the list (for no std data use data structures print function inside 
+					   Node::printNode())
+	Node<T> * search(T* info):Search list for data == info and return Node in which it was found. If
+							 not found returns NULL.
+
+Created by Charalampos Kioses.
